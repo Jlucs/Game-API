@@ -14,9 +14,10 @@ class GameReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Game $game)
+
+    public function index($id)
     {
-        return Game::with('reviews')->get();
+        return Game::with('reviews')->find($id);
     }
 
     /**
@@ -46,9 +47,9 @@ class GameReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Review $review)
     {
-        
+        ///
     }
 
     /**

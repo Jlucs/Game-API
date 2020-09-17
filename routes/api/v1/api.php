@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-// Users
-
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\ReviewController;
@@ -28,9 +26,7 @@ use App\Http\Controllers\GameReviewController;
 Route::resource('games', GameController::class);
 Route::resource('reviews', ReviewController::class);
 Route::resource('games.reviews', GameReviewController::class);
-
-Route::get('games/reviews', [GameReviewController::class, 'index']);
-
+Route::get('games/reviews', [ReviewController::class, 'gameReviews']);
 Route::prefix('/users')->group( function() {
 	Route::post('/login', [LoginController::class, 'login']);
 });

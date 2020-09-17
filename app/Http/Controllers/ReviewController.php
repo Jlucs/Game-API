@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\review;
+use App\Models\game;
 
 
 class ReviewController extends Controller
@@ -88,4 +89,5 @@ class ReviewController extends Controller
     {
         return Review::destroy($id);
     }
+
 }
